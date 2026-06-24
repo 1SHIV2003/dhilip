@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ion-Neutral Collisions Research - Detailed View</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      /* Page-Specific Structural Adjustments */
+      .page-hero-banner {
+        width: 100%;
+        height: 200px;
+        background: linear-gradient(
+            rgba(11, 37, 69, 0.85),
+            rgba(31, 102, 138, 0.85)
+          ),
+          url("https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 80px; /* Clears fixed navbar padding smoothly */
+      }
+
+      .page-hero-banner h1 {
+        color: #ffffff;
+        font-size: 2.8rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+
+      .research-category-strip {
+        background-color: #1f668a;
+        color: #ffffff;
+        text-align: center;
+        padding: 12px 20px;
+        font-size: 1.1rem;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        width: 100%;
+        margin-bottom: 40px;
+      }
+
+      /* Clean Two-Column Layout Wrapper */
+      .research-layout-container {
+        display: grid;
+        grid-template-columns: 7fr 3fr; /* 70% content, 30% sidebar */
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto 60px auto;
+        padding: 0 20px;
+      }
+
+      .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: #1f668a;
+        text-decoration: none;
+        font-weight: 600;
+        margin-bottom: 25px;
+        transition: color 0.2s;
+        font-size: 0.95rem;
+      }
+
+      .back-btn:hover {
+        color: #0b2545;
+        text-decoration: underline;
+      }
+
+      .research-main-content h2 {
+        color: #0b2545;
+        font-size: 2rem;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .research-text {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: #334155;
+        text-align: justify;
+        margin-bottom: 20px;
+      }
+
+      /* Left-Side Key Highlights Highlight Box */
+      .highlight-quote {
+        background-color: #f8fafc;
+        border-left: 4px solid #1f668a;
+        padding: 20px;
+        margin: 25px 0;
+        border-radius: 0 8px 8px 0;
+      }
+
+      .highlight-quote p {
+        font-style: italic;
+        color: #475569;
+        line-height: 1.7;
+        margin: 0;
+      }
+
+      /* Cohesive Right Sidebar Info Card */
+      .research-sidebar-card {
+        background-color: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        padding: 25px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+        height: fit-content;
+        position: sticky;
+        top: 110px;
+      }
+
+      .sidebar-title {
+        font-size: 1.1rem;
+        color: #0b2545;
+        font-weight: 700;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #eff6ff;
+        padding-bottom: 8px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .sidebar-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .sidebar-list li {
+        font-size: 0.95rem;
+        color: #475569;
+        padding: 8px 0;
+        border-bottom: 1px dashed #f1f5f9;
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      .sidebar-list li i {
+        color: #ea580c;
+        margin-top: 4px;
+        font-size: 0.85rem;
+      }
+
+      /* Responsive adaptation for smaller viewports */
+      @media (max-width: 900px) {
+        .research-layout-container {
+          grid-template-columns: 1fr;
+        }
+        .research-sidebar-card {
+          position: static;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <i class="fas fa-atom"></i> Dhilip's Group@IIT Ropar
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="interests.html" class="active-link">Research Interests</a>
+          </li>
+          <li>
+            <a href="group.html"
+              >Research Group
+              <i
+                class="fas fa-caret-down"
+                style="font-size: 0.8rem; margin-left: 3px"
+              ></i
+            ></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="group.html"
+                  ><i class="fas fa-users-viewfinder"></i> Current Members</a
+                >
+              </li>
+              <li>
+                <a href="alumni.html"
+                  ><i class="fas fa-user-graduate"></i> Alumni</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li><a href="publications.html">Publications &amp; S/W</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="teaching.html">Teaching</a></li>
+          <li><a href="jobs.html">Job Opening</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="page-hero-banner">
+      <h1>Research Focus</h1>
+    </div>
+
+    <div class="research-category-strip">
+      Atmospheric Chemistry &amp; Quantum Molecular Dynamics
+    </div>
+
+    <main style="margin-top: 0">
+      <div class="research-layout-container">
+        <div class="research-main-content">
+          <a href="interests.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to Research Interests
+          </a>
+
+          <h2><i class="fas fa-bolt"></i> Low-Energy Ion-Neutral Collisions</h2>
+          <hr
+            style="
+              border: 0;
+              height: 1px;
+              background: #cbd5e1;
+              margin: 15px 0 25px 0;
+            "
+          />
+
+          <p class="research-text">
+            Proton interactions with interstellar and atmospheric molecules are
+            of great interest in many fields of study and are relevant to
+            interstellar medium and earth’s stratosphere. When the solar flare
+            occur, the solar wind carry protons, the main constituent, with high
+            kinetic energy in the range of 1–2 keV enter the earth’s ionosphere.
+            High energy protons transfer their kinetic energy due to collisions
+            with various molecules present in the region resulting in inelastic,
+            charge transfer and reactive processes.
+          </p>
+
+          <p class="research-text" style="margin-top: 15px">
+            Chemistry of interstellar medium (ISM) is different from the
+            conventional study of chemical reactions. Temperature of ISM is as
+            low as 2 K and understanding of chemical reactivity demands cold
+            state specific cross sections. Astrochemical models need data in the
+            broad region of temperatures to understand the reactivity and
+            knowledge of abundance of detected species.
+          </p>
+
+          <p class="research-text" style="margin-top: 15px">
+            The analysis of observed spectra and estimation of abundance often
+            require collisional excitation and deexcitation rate coefficients.
+            Quantum dynamics study of ion-neutral energy transfer process widens
+            the understanding the molecular composition and kinetics of ISM.
+          </p>
+        </div>
+
+        <div class="research-sidebar-wrapper">
+          <div class="research-sidebar-card">
+            <div class="sidebar-title">
+              <i class="fas fa-calculator"></i> Core Frameworks
+            </div>
+            <ul class="sidebar-list">
+              <li>
+                <i class="fas fa-check-circle"></i> Quantum Dynamics Studies
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> State-Specific Cross
+                Sections
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Inelastic &amp; Charge
+                Transfer Analysis
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Collisional Rate
+                Coefficients
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Research Group. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
